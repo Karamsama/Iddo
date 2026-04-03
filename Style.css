@@ -2,14 +2,15 @@
 a{ text-decoration: none;}
 ul{ list-style: none; padding: 0;}
 img{ vertical-align: bottom;}
-button{ cursor: pointer; padding: 0; font: 16px var(--ff);}
+button{ cursor: pointer; padding: 0; font: 16px var(--ff); font-weight: 700;}
 input,select{ font-family: var(--ff);}
 label{ display: inline-block;}
-.img-resp{ max-width: 100%; height: auto;}
+p{ font-weight: 500;}
+.img-responsive{ max-width: 100%; height: auto;}
 @font-face {
     font-family: proxima;
     src: url(../fonts/ProximaNova-Bold.woff2);
-    font-weight: 700;
+       font-weight: 700;
     font-display: swap;
 }
 @font-face {
@@ -34,7 +35,7 @@ body{ font: 16px var(--ff);}
 .flex{ display: flex;}
 .justify-space{ justify-content: space-between;}
 .align-center{ align-items: center;}
-header{ background: #000; color: #fff;}
+header{ background: #000; color: #fff; position: relative;}
 header h1{ font-size: 2rem;}
 header a{ display: inline-block; color: inherit; line-height: 80px;}
 
@@ -53,24 +54,26 @@ header a{ display: inline-block; color: inherit; line-height: 80px;}
 .col-12{ flex-basis: 100%; max-width: 100%;}
 
 nav li{ margin: 0 5px;}
-nav a{ padding: 0 1rem;}
+nav a{ padding: 0 1rem; transition: color 0.2s ease; font-weight: 600;}
+nav a:hover{ color: var(--red);}
 nav{ margin-left: -20px;}
 .btn{ width: 90px; height: 35px; border: 2px solid; color: var(--red); background: none; border-radius: 10px; font: 16px var(--ff);}
 .btn span{ display: block; height: 2px; background: var(--red); margin: 6px 10px; transition: .4s; transform-origin: right center; }
 .menu{ display: none; position: absolute; right: 1rem; top: 20px; }
+.collapse{ display: none; }
 
 /* section 2 */
 .banner{background-color: rgb(102 102 102); padding: 20rem 0; color: white;}
 .banner button{ background: none ; border:none; color: #fff; font-size: 10rem; margin-right: 40px;}
-.banner p{font-size: 4rem; font-weight: 100;}
+.banner p{font-size: 4rem;}
 .banner a{color: var(--red);}
 
 /* section 3 */
 .sec3{background-color: var(--red); color: white; padding: 50px 0;}
-h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid; margin-bottom: 2rem;}
-.sec3 h3{ font-size: 16px; line-height: 30px;}
-.sec3 p{ font-size: 14px; font-weight: 100; line-height: 22px;}
-.grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap:4rem 0;}  /*   issues here in grid template        */
+h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid; margin-bottom: 2rem; color: #000;}
+.sec3 h2{ color: #fff;}
+.sec3 p{ font-size: 15px; font-weight: 300; line-height: 22px;}
+.grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap:4rem 0;}
 .circle{ width: 100px; height: 100px; border: 2px solid; border-radius: 50%; flex-shrink: 0; display: grid; place-items: center; font-size: 36px; margin-right: 2rem; }
 
 /* section 4 */
@@ -84,50 +87,51 @@ h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid; margin-bottom
 .detail{ position: absolute; left: 0; bottom: -50px; right: 0; padding: 1rem 0; background-color: #fff;  transition: 400ms; opacity: 0;
 text-align: center;}
 .detail h3{ font-size: 18px; color: var(--red); line-height: 40px; }
-.detail p{ font: 100 14px var(--ff); line-height: 2rem;}
+.detail p{ font-size: 15px; line-height: 2rem;}
 .work:hover .detail{ opacity: 1; bottom: 0;}
 .more-btn{ font-size: 36px; border:none; background: none; color: var(--red);}
 
 /* section 6 */
 .sec6{background-color: #666; color: #fff; padding: 4rem 0 2rem; }
-.inter p{ font: 100 36px/41px var(--ff);  }
-.inter{  display: none; text-align: center;}
+.inter p{ font-size: 36px; line-height: 41px; font-weight: 500; }
+.inter{  display: none; text-align: center; animation: fadeIn 0.5s ease;}
 .inter.active{display: block;}
+@keyframes fadeIn{ from{ opacity: 0; transform: translateY(10px);} to{ opacity: 1; transform: translateY(0);}}
 .inter img{ display: block; margin: 17px auto;}
 
 
-/* problem */
 .pager{ justify-content: center; margin-top: 2rem; }
 .pager li{ margin: 0 5px; }
 .pager a{ display: block; border: 2px solid #fff; width: 10px; height: 10px; border-radius: 50%;}
 .pager a.active{ background: #fff;}
-.wrap-6 figcaption{ font-weight: bold;}
 
 /* section 7 */
-.sec7{  background: #fff; color: #363636; padding: 100px 0 140px;}
+.sec7{  background: #fff; color: #363636; padding: 100px 0 70px;}
 .pos-rel{ position: relative; margin-top: 50px;}
 .social-med{position: absolute; left: 130px; top: 60px;}
 .social-med li{margin-right: 5px;}
 .social-med a{display: block; width: 50px; line-height:50px; text-align: center; border-radius: 50%; background: var(--red); color: #fff; font-size: 24px;}
 .gap{margin: 50px 0 0 100px;}
 .gap h3{ font-size: 18px; color: var(--red);}
-.gap p{font-size: 14px; font-weight: 100; line-height: 22px;}
-.gap small{font-weight: 100;}
+.gap p{font-size: 15px; line-height: 22px;}
+.gap small{ font-weight: 500; color: #888;}
 
 /* section 8 */
 .sec8{ background-color: #666; text-align: center; color: #fff; padding: 80px 0;}
 .sec8 span{font-size: 72px;}
-.sec8 p{font-size: 72px; font-weight: 100; font-family: var(--ff);}
+.sec8 p{font-size: 72px; font-weight: 500; font-family: var(--ff);}
 .sec8 b{font-size: 18px; display: inline-block;}
 
 /* section9 */
-.sec9{background-color: #fff; padding: 100px 0;}
+.sec9{background-color: #fff; padding: 100px 0 30px ;}
+.sec9 h2{ color: var(--red);}
+.sec9 p{ color: #000;}
 canvas{ background: #ddd; margin-top: 50px; max-width: 100%;}
 .accordion{margin-top: 50px;}
 .accordion li{ margin-bottom: 10px;}
-.accordion a{ color: #898989; display: block; padding: 1rem; border: 1px solid #ebebeb; border-radius: 10px;}
+.accordion a{ color: #898989; display: block; padding: 1rem; border: 1px solid #ebebeb; border-radius: 10px; font-weight: 500;}
 .accordion span.fa{ margin-right: 18px;}
-.accordion p{ display: none;font-size: 14px; font-weight: 100; line-height: 22px; color: #363636; margin: 20px; }
+.accordion p{ display: none;font-size: 15px; line-height: 22px; color: #363636; margin: 20px; }
 .accordion a.active{ color: var(--red);}
 .accordion a::after{ content: '+'; float: right;}
 .accordion a.active::after{ content: '-';}
@@ -147,19 +151,20 @@ canvas{ background: #ddd; margin-top: 50px; max-width: 100%;}
 .sec12 address{ font-style: normal; color: #666; font-size: 16px; line-height: 30px; }
 .social2 li{ margin: 20px 20px 20px 0;}
 .social2 a{ display: block; color: var(--red);}
-.sec12 label{ border: 2px solid; color: #363636; padding: 17px; margin: 15px 0; }
-.sec12 :is(input,textarea){ background: none; border: none; }
-.sec12 textarea{ resize: none; vertical-align: top; height: 42px; }
-.sec12 button{ border: none; background: #fff; width: 100%; margin: 15px 0; height: 80px; color: var(--red); border-radius: 10px; font: 400 16px var(--ff); }
+.sec12 label{ border: 2px solid; color: #363636; padding: 17px; margin: 15px 0; width: 100%;}
+.sec12 :is(input,textarea){ background: none; border: none; outline: none; width: 100%;}
+.sec12 textarea{ resize: vertical; vertical-align: top; height: 150px; }
+.sec12 button{ border: none; background: #fff; width: 100%; margin: 15px 0; height: 80px; color: var(--red); border-radius: 10px; font: 400 16px var(--ff); transition: background 0.3s ease, color 0.3s ease; }
+.sec12 button:hover{ background: var(--red); color: #fff; }
 .sec12 button span.fa{ font-size: 36px; vertical-align: middle;}
 
 
 .sec13{ background: #252525; color: #fff; text-align: center; padding: 50px 0;}
-.sec13 button.fa{ background: none; border: none; color: var(--red); }
+.sec13 button.fa{ background: none; border: none; color: var(--red); font-size: 2rem; }
 /* media */
 
 @media screen and (max-width:1220px){
-    html{ font-size: 14px;}
+    html{ font-size: 15px;}
     h2{ font-size: 62px;}
 }
 
@@ -179,37 +184,47 @@ canvas{ background: #ddd; margin-top: 50px; max-width: 100%;}
     .col-t-hide{ display: none;}
     .col-t-auto{ flex-basis: 20%; max-width: 20%; }
     .banner p{ font-size: 3rem;}
+    .banner{ padding: 10rem 0;}
     .sec8 span{font-size: 3rem;}
-    .sec8 p{font-size: 3rem; font-weight: 100; font-family: var(--ff);}
+    .sec8 p{font-size: 3rem; font-family: var(--ff);}
     .gap{margin: 50px 0 0 20px;}
     }
 
 @media screen and (max-width:767px){
     html{ font-size: 13px;}
-    header .flex{ display: none;}
+    .desktop-nav{ display: none !important;}
     .col-m-6{ flex-basis: 50%; max-width: 50%;}
-     .collapse{ position: absolute; background: #000; left: 0; right: 0; top: 60px; padding-bottom: 10px; display: none;}
-    .menu{ display: inline-block}
+    .collapse{ display: block; background: #000; left: 0; right: 0; max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.35s ease; z-index: 99; padding: 0;}
+    .collapse.open{ max-height: 400px; padding: 10px 0 20px;}
+    .menu{ display: inline-block;}
     .menu.active span:nth-child(1){ transform: rotate(-14deg); }
     .menu.active span:nth-child(2){ opacity: 0; }
     .menu.active span:nth-child(3){ transform: rotate(14deg);}
-      .collapse .flex{ flex-flow: column wrap;}
-    .collapse ul{ flex-flow: column wrap; }
-    .wrap-5 .btn{ margin-right: 6px; }
+    .collapse nav ul{ flex-flow: column; padding: 0;}
+    .collapse nav li{ margin: 0;}
+    .collapse nav a{ display: block; line-height: 50px; padding: 0 1rem; border-bottom: 1px solid #333; color: #fff; font-size: 16px; text-align: center; transition: color 0.2s ease;}
+    .collapse nav a:hover{ color: var(--red);}
+    .collapse .btn{ display: block; margin: 15px auto; width: calc(100% - 2rem); text-align: center;}
     .sec8 span{font-size: 2rem;}
-    .sec8 p{font-size: 2rem; font-weight: 100; font-family: var(--ff);}
+    .sec8 p{font-size: 2rem; font-family: var(--ff);}
     .sec10 input{font-size: 26px;}
     .sec11 .box{ line-height: 75px; text-align: center;  }
-
 }
 
 @media screen and (max-width:460px){
     .col-p-4{ flex-basis: 33.33%; max-width: 33.33%;}
     .col-p-6{ flex-basis: 50%; max-width: 50%;}
     .col-p-12{ flex-basis: 100%; max-width: 100%;}
-    .banner .flex{ flex-flow: column;}
+    .banner .flex{ flex-flow: column; align-items: center; text-align: center;}
     .banner button{ margin: 0 0 2rem 0;}
+    .banner{ padding: 6rem 0;}
     .grid{ grid-template-columns: repeat(1, 1fr); }
       .sec10 input{ width: 240px; font-size: 24px;}
     .col-t-auto{ flex-basis: 50%; max-width: 100%; }
     }
+
+/* sticky header */
+header.sticky{ position: fixed; top: 0; left: 0; right: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,.4); }
+
+/* active nav link */
+nav a.active{ color: var(--red);}

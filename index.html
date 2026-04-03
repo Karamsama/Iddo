@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="Style.css">
+    <script src="main.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -18,26 +19,37 @@
                 </div>
 
                 <div class="col-10 col-m-6">
-                      <button aria-label="mobile menu" class="btn menu"><span></span><span></span><span></span></button>
-                    <div class="collapse">
-                    <div class="flex justify-space align-center">
+                    <button aria-label="mobile menu" class="btn menu"><span></span><span></span><span></span></button>
+                    <div class="flex justify-space align-center desktop-nav">
                         <nav>
                             <ul class="flex">
-                                <li><a href="">Home</a></li>
-                                <li><a href="">Services</a></li>
-                                <li><a href="">Portfolio</a></li>
-                                <li><a href="">About</a></li>
-                                <li><a href="">Contact</a></li>
+                                <li><a href="#home">Home</a></li>
+                                <li><a href="#services">Services</a></li>
+                                <li><a href="#portfolio">Portfolio</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#contact">Contact</a></li>
                             </ul>
                         </nav>
                         <button class="btn">Sign Up</button>
                     </div>
-                    </div>
                 </div>
             </div>
-        </div>
+            <!-- phone dropdown -->
+            <div class="collapse">
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="btn">Sign Up</button>
+            </div>
+        </div><!-- end container -->
     </header>
-    <div class="banner" role="banner">
+    <div class="banner" id="home" role="banner">
         <div class="container">
             <div class="flex align-center">
                 <div>
@@ -53,7 +65,7 @@
     </div>
 
     <!-- part 3 -->
-    <section class="sec3">
+    <section class="sec3" id="services">
         <div class="container">
             <div class="row">
                 <div class="col-4 col-t-6 col-p-12">
@@ -116,7 +128,7 @@
     </section>
 
     <!-- part 5 -->
-    <section class="sec5">
+    <section class="sec5" id="portfolio">
         <div class="container">
             <div class="col-4 col-t-6 col-p-12">
                 <h2>OUR WORKS.</h2>
@@ -233,7 +245,7 @@
     </section>
 
     <!-- section 7 -->
-    <section class="sec7">
+    <section class="sec7" id="about">
         <div class="container">
             <div class="col-4 col-t-6 col-p-12">
                 <h2>OUR TEAM.</h2>
@@ -303,11 +315,66 @@
                     </div>
                 </div>
             </div>
-            <button class="more-btn"><span class="fa fa-plus-circle"></span></button>
+            <div class="row team-extra" style="display:none;">
+                <div class="col-4 col-t-12 col-p-12">
+                    <div class="pos-rel">
+                        <div class="flex"><img src="img/circle.webp" alt="">
+                            <div class="social-med">
+                                <ul class="flex">
+                                    <li><a href=""><span class="fa fa-twitter"></span></a></li>
+                                    <li><a href=""><span class="fa fa-facebook"></span></a></li>
+                                    <li><a href=""><span class="fa fa-instagram"></span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gap">
+                        <h3>SARAH LANE</h3>
+                        <small>Lead Designer</small>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi perspiciatis architecto voluptate, expedita debitis nulla fugiat repudiandae.</p>
+                    </div>
+                </div>
+                <div class="col-4 col-t-12 col-p-12">
+                    <div class="pos-rel">
+                        <div class="flex"><img src="img/circle.webp" alt="">
+                            <div class="social-med">
+                                <ul class="flex">
+                                    <li><a href=""><span class="fa fa-twitter"></span></a></li>
+                                    <li><a href=""><span class="fa fa-facebook"></span></a></li>
+                                    <li><a href=""><span class="fa fa-instagram"></span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gap">
+                        <h3>DAVID PARK</h3>
+                        <small>Developer</small>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi perspiciatis architecto voluptate, expedita debitis nulla fugiat repudiandae.</p>
+                    </div>
+                </div>
+                <div class="col-4 col-t-12 col-p-12">
+                    <div class="pos-rel">
+                        <div class="flex"><img src="img/circle.webp" alt="">
+                            <div class="social-med">
+                                <ul class="flex">
+                                    <li><a href=""><span class="fa fa-twitter"></span></a></li>
+                                    <li><a href=""><span class="fa fa-facebook"></span></a></li>
+                                    <li><a href=""><span class="fa fa-instagram"></span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gap">
+                        <h3>EMMA ROSS</h3>
+                        <small>Marketing</small>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi perspiciatis architecto voluptate, expedita debitis nulla fugiat repudiandae.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="more-btn" id="team-more-btn"><span class="fa fa-plus-circle"></span></button>
         </div>
     </section>
 
-    <!-- section 8 -->
     <section class="sec8">
         <div class="container">
             <div class="row">
@@ -386,9 +453,6 @@
 
                 </div>
             </div>
-
-
-        </div>
         </div>
     </section>
 
